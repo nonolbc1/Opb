@@ -6,5 +6,6 @@ public class Opb implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        ModCreativeTab.registerTabs();
     }
 }
