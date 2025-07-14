@@ -2,9 +2,13 @@ package org.nonolbc1.opb;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.LightBlock;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.BlockStateComponent;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -33,17 +37,11 @@ public class ModCreativeTab {
             entries.add(Blocks.JIGSAW.asItem());
             entries.add(Blocks.STRUCTURE_BLOCK.asItem());
 
+            // AUTRES
+            entries.add(Blocks.SPAWNER.asItem());
+
             // Light
             entries.add(Blocks.LIGHT.asItem());
-
-            // Insolites
-            entries.add(Blocks.FIRE.asItem());
-            entries.add(Blocks.SOUL_FIRE.asItem());
-            entries.add(Blocks.WATER.asItem());
-            entries.add(Blocks.LAVA.asItem());
-            entries.add(Blocks.WATER_CAULDRON.asItem());
-            entries.add(Blocks.LAVA_CAULDRON.asItem());
-            entries.add(Blocks.PISTON_HEAD.asItem());
         })
         .build();
 
