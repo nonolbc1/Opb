@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "opb",
+  "version": "${version}",
+  "name": "OPB",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/opb/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.nonolbc1.opb.client.OpbDataGenerator"
+    ],
+    "client": [
+      "org.nonolbc1.opb.client.OpbClient"
+    ],
+    "main": [
+      "org.nonolbc1.opb.Opb"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
