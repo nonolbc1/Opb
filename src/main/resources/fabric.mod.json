@@ -7,7 +7,7 @@
   "authors": [],
   "contact": {},
   "license": "All-Rights-Reserved",
-  "icon": "assets/opb/icon.png",
+  "icon": "assets/opblocks/icon.png",
   "environment": "client",
   "entrypoints": {
     "fabric-datagen": [
@@ -21,8 +21,8 @@
     ]
   },
   "depends": {
-    "fabricloader": ">=${loader_version}",
+    "fabricloader": ">=0.15.0",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": ">=1.21 <=1.21.7"
   }
 }
