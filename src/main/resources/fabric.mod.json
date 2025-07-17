@@ -10,9 +10,6 @@
   "icon": "assets/opblocks/icon.png",
   "environment": "client",
   "entrypoints": {
-    "fabric-datagen": [
-      "org.nonolbc1.opb.client.OpbDataGenerator"
-    ],
     "client": [
       "org.nonolbc1.opb.client.OpbClient"
     ],
@@ -23,6 +20,6 @@
   "depends": {
     "fabricloader": ">=0.15.0",
     "fabric": "*",
-    "minecraft": ">=1.20 <=1.20.6"
+    "minecraft": ">=1.19 <=1.19.2"
   }
 }
