@@ -13,6 +13,7 @@ public class ModCreativeTab {
             )
             .icon(() -> new ItemStack(Items.COMMAND_BLOCK))
             .appendItems(stacks -> {
+
                 stacks.add(new ItemStack(Items.COMMAND_BLOCK));
                 stacks.add(new ItemStack(Items.CHAIN_COMMAND_BLOCK));
                 stacks.add(new ItemStack(Items.REPEATING_COMMAND_BLOCK));
