@@ -1,35 +1,36 @@
 package org.nonolbc1.opb;
 
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModCreativeTab {
-
-    public static final ItemGroup OPB_GROUP = FabricItemGroupBuilder.create(
+    public static final ItemGroup OPB_GROUP = FabricItemGroup.builder(
                     new Identifier("opblocks", "tab")
             )
+            .displayName(Text.translatable("itemGroup.opblocks.tab"))
             .icon(() -> new ItemStack(Items.COMMAND_BLOCK))
-            .appendItems(stacks -> {
-
-                stacks.add(new ItemStack(Items.COMMAND_BLOCK));
-                stacks.add(new ItemStack(Items.CHAIN_COMMAND_BLOCK));
-                stacks.add(new ItemStack(Items.REPEATING_COMMAND_BLOCK));
-                stacks.add(new ItemStack(Items.COMMAND_BLOCK_MINECART));
-
-                stacks.add(new ItemStack(Items.DEBUG_STICK));
-                stacks.add(new ItemStack(Items.BARRIER));
-                stacks.add(new ItemStack(Items.STRUCTURE_VOID));
-                stacks.add(new ItemStack(Items.JIGSAW));
-                stacks.add(new ItemStack(Items.STRUCTURE_BLOCK));
-
-                stacks.add(new ItemStack(Items.SPAWNER));
-                stacks.add(new ItemStack(Items.LIGHT));
-            })
             .build();
 
     public static void register() {
+        ItemGroupEvents.modifyEntriesEvent(OPB_GROUP).register(entries -> {
+            entries.add(Items.COMMAND_BLOCK);
+            entries.add(Items.CHAIN_COMMAND_BLOCK);
+            entries.add(Items.REPEATING_COMMAND_BLOCK);
+            entries.add(Items.COMMAND_BLOCK_MINECART);
+
+            entries.add(Items.DEBUG_STICK);
+            entries.add(Items.BARRIER);
+            entries.add(Items.STRUCTURE_VOID);
+            entries.add(Items.JIGSAW);
+            entries.add(Items.STRUCTURE_BLOCK);
+
+            entries.add(Items.SPAWNER);
+            entries.add(Items.LIGHT);
+        });
     }
 }
